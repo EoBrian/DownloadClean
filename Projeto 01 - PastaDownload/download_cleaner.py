@@ -11,7 +11,7 @@ PASTAS = {
     
     #ARQUIVOS
     'planilhas': diretório + r'\ARQUIVOS\XLSX',
-    'executaveis': diretório + r'\ARQUIVOS\EXECULTAVEIS',
+    'executaveis': diretório + r'\ARQUIVOS\EXECUTAVEIS',
     'documento': diretório + r'\ARQUIVOS\PDF',
     'zipados': diretório + r'\ARQUIVOS\ZIPADOS',
 }

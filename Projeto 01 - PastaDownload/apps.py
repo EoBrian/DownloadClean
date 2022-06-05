@@ -19,11 +19,31 @@ def pathDownload(diretório):
 
 
 def archiveID(arquivo, extension, pasta):
+    MIDIA = 'FOTOS', 'VIDEOS', 'MUSICAS'
+    ARQUIVOS = 'XLSX', 'EXECUTAVEIS', 'ZIPADOS', 'PDF'
+    directory = pathDir()
 
     for value in extension:
         try:
             if value in arquivo:
-                shutil.move(arquivo, pasta)
+                try:
+                    shutil.move(arquivo, pasta)
+                except:
+                    os.makedirs('ARQUIVOS')
+                    os.makedirs('MIDIA')
+                    os.chdir('ARQUIVOS')
+                    
+                    for item in ARQUIVOS:
+                        os.makedirs(item)
+
+                    os.chdir(directory)
+                    os.chdir('MIDIA')
+
+                    for item in MIDIA:
+                        os.makedirs(item)
+                        
+                    os.chdir(directory)
+                    shutil.move(arquivo, pasta)
 
             elif value not in arquivo:
                 None

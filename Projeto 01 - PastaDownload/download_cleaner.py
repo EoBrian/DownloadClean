@@ -8,12 +8,12 @@ PASTAS = {
     'musicas': diretório + r'\MIDIA\MUSICAS',
     'videos': diretório + r'\MIDIA\VIDEOS',
     'fotos': diretório + r'\MIDIA\FOTOS',
-    
-    #ARQUIVOS
     'planilhas': diretório + r'\ARQUIVOS\XLSX',
     'executaveis': diretório + r'\ARQUIVOS\EXECUTAVEIS',
     'documento': diretório + r'\ARQUIVOS\PDF',
     'zipados': diretório + r'\ARQUIVOS\ZIPADOS',
+    'python': diretório + r'\SCRIPTS\PYTHON',
+    'html': diretório + r'\SCRIPTS\HTML-CSS-JS'
 }
 
 #EXTENSÕES DE ARQUIVOS
@@ -25,6 +25,8 @@ EXTENSION = {
     'execultaveis': ['.exe', '.bash', '.msi', '.sh'],
     'documento': ['.pdf', '.txt', '.doc', '.docx', '.ppt', '.pps'],
     'zipados': ['.tar', '.z', '.gz', '.taz', '.tgz', '.rar', '.zip', '.cab', '.arj'],
+    'python': ['.py', '.pip', '.pipe', '.pype'],
+    'html': ['.html', '.css', '.js', '.json', '.text']
 }
 
 if __name__ == '__main__':

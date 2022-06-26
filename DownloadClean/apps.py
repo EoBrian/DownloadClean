@@ -26,8 +26,7 @@ def pathCreate(local, name_path):
 def archiveID(arquivo, extension, pasta):
     download = pathDir()
     os.chdir(download)
-    PASTAS = 'MIDIA', 'ARQUIVOS', 'SCRIPTS'
-    MIDIA = 'FOTOS', 'VIDEOS', 'MUSICAS'
+    PASTAS ='ARQUIVOS', 'SCRIPTS'
     ARQUIVOS = 'XLSX', 'EXECUTAVEIS', 'ZIPADOS', 'PDF'
     SCRIPTS = 'PYTHON', 'HTML-CSS-JS'
 
@@ -39,14 +38,13 @@ def archiveID(arquivo, extension, pasta):
                 except:
                     for item in PASTAS:
                         os.makedirs(item)
-                    pathCreate(PASTAS[0], MIDIA)
                     pathCreate(PASTAS[1], ARQUIVOS)
                     pathCreate(PASTAS[2], SCRIPTS)
 
                     shutil.move(arquivo, pasta)
 
             elif value not in arquivo:
-                None
+                pass
             
         except:
             os.remove(arquivo)

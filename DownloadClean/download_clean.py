@@ -1,13 +1,14 @@
 from apps import *
 
 diretório = pathDir()
-
+informações = os.environ
+usuário = informações['USERPROFILE'] 
 #PASTAS
 PASTAS = {
     #MIDIAS
-    'musicas': diretório + r'\MIDIA\MUSICAS',
-    'videos': diretório + r'\MIDIA\VIDEOS',
-    'fotos': diretório + r'\MIDIA\FOTOS',
+    'musicas': usuário + r'\Music',
+    'videos': usuário + r'\Videos',
+    'fotos': usuário + r'C:\OneDrive\Imagens',
     'planilhas': diretório + r'\ARQUIVOS\XLSX',
     'executaveis': diretório + r'\ARQUIVOS\EXECUTAVEIS',
     'documento': diretório + r'\ARQUIVOS\PDF',

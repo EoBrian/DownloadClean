@@ -8,7 +8,7 @@ PASTAS = {
     #MIDIAS
     'musicas': usuário + r'\Music',
     'videos': usuário + r'\Videos',
-    'fotos': usuário + r'C:\OneDrive\Imagens',
+    'fotos': usuário + r'\OneDrive\Imagens',
     'planilhas': diretório + r'\ARQUIVOS\XLSX',
     'executaveis': diretório + r'\ARQUIVOS\EXECUTAVEIS',
     'documento': diretório + r'\ARQUIVOS\PDF',

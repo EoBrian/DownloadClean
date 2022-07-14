@@ -35,6 +35,10 @@ def archiveID(arquivo, extension, pasta):
             if value in arquivo:
                 try:
                     shutil.move(arquivo, pasta)
+
+                except Exception as error:
+                    return None
+
                 except:
                     for item in PASTAS:
                         os.makedirs(item)
@@ -43,9 +47,8 @@ def archiveID(arquivo, extension, pasta):
 
                     shutil.move(arquivo, pasta)
 
-            elif value not in arquivo:
-                pass
-            
+            else:
+                return None
         except:
             os.remove(arquivo)
 

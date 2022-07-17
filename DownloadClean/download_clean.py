@@ -38,4 +38,4 @@ if __name__ == '__main__':
         pass
         for extension, path in zip(EXTENSION, PASTAS):
             archiveID(archives, EXTENSION[extension], PASTAS[path])
-        
+            

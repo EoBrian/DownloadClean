@@ -21,7 +21,7 @@ PASTAS = {
 EXTENSION = {
     'musicas': ['.mp3', '.m4a', '.aac', '.flac', '.wma', '.wav', '.pcm'],
     'videos': ['.mp4', '.m4v', '.mov', '.avi', '.mkv', '.wmv', '.mpg', '.mpeg'],
-    'imagens': ['.png', '.jpeg', '.jpg', '.gif'],
+    'imagens': ['.png', '.jpeg', '.jpg', '.gif', '.jfif'],
     'planilhas': ['.xlsx', '.xls', '.csv', '.sql', '.bat'],
     'execultaveis': ['.exe', '.bash', '.msi', '.sh'],
     'documento': ['.pdf', '.txt', '.doc', '.docx', '.ppt', '.pps'],

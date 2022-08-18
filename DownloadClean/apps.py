@@ -34,18 +34,25 @@ def archiveID(arquivo, extension, pasta):
         try:
             if value in arquivo:
                 try:
+                    if '.jfif' in arquivo:
+                        archiver = arquivo.split('.')
+                        archiver[-1] = '.jpg'
+                        new_archiver = archiver[0] + archiver[-1]
+                        os.rename(arquivo, new_archiver)
+                        
                     shutil.move(arquivo, pasta)
                 
                 except Exception as error:
                     for item in PASTAS:
                         os.makedirs(item)
                     pathCreate(PASTAS[1], ARQUIVOS)
-                    pathCreate(PASTAS[2], SCRIPTS)
-
-                    shutil.move(arquivo, pasta)
+                    pathCreate(PASTAS[2], SCRIPTS)                    
                     
-                except:
-                    pass
+                except FileNotFoundError:
+                    print('>>> arquivo não existe!')
+                
+                finally:
+                    shutil.move(arquivo, pasta)
             else:
                 pass
         except:

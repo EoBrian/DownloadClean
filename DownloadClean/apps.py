@@ -40,21 +40,17 @@ def archiveID(arquivo, extension, pasta):
                         new_archiver = archiver[0] + archiver[-1]
                         os.rename(arquivo, new_archiver)
                         
-                    shutil.move(arquivo, pasta)
                 
-                except Exception as error:
+                except Exception:
                     for item in PASTAS:
                         os.makedirs(item)
                     pathCreate(PASTAS[1], ARQUIVOS)
                     pathCreate(PASTAS[2], SCRIPTS)                    
-                    
-                except FileNotFoundError:
-                    print('>>> arquivo não existe!')
+               
                 
                 finally:
                     shutil.move(arquivo, pasta)
-            else:
-                pass
+            
         except:
             os.remove(arquivo)
 

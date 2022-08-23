@@ -25,7 +25,7 @@ EXTENSION = {
     'planilhas': ['.xlsx', '.xls', '.csv', '.sql', '.bat'],
     'execultaveis': ['.exe', '.bash', '.msi', '.sh'],
     'documento': ['.pdf', '.txt', '.doc', '.docx', '.ppt', '.pps'],
-    'zipados': ['.tar', '.z', '.gz', '.taz', '.tgz', '.rar', '.zip', '.cab', '.arj'],
+    'zipados': ['.tar', '.z', '.gz', '.taz', '.tgz', '.rar', '.zip', '.cab', '.arj','.7z'],
     'python': ['.py', '.pip', '.pipe', '.pype'],
     'html': ['.html', '.css', '.js', '.json', '.text']
 }

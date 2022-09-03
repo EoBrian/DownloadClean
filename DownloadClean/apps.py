@@ -23,7 +23,7 @@ def pathCreate(local, name_path):
     os.chdir(pathDir())
 
 
-def archiveID(arquivo, extension, pasta):
+async def archiveID(arquivo, extension, pasta):
     download = pathDir()
     os.chdir(download)
     PASTAS ='ARQUIVOS', 'SCRIPTS'
@@ -38,7 +38,8 @@ def archiveID(arquivo, extension, pasta):
                         archiver = arquivo.split('.')
                         archiver[-1] = '.jpg'
                         new_archiver = archiver[0] + archiver[-1]
-                        os.rename(arquivo, new_archiver)
+                        await os.rename(arquivo, new_archiver)
+                        
                         
                 
                 except Exception:
@@ -49,8 +50,8 @@ def archiveID(arquivo, extension, pasta):
                
                 
                 finally:
-                    shutil.move(arquivo, pasta)
+                    await shutil.move(arquivo, pasta)
             
         except:
-            os.remove(arquivo)
+            await os.remove(arquivo)
 

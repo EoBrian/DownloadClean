@@ -23,7 +23,7 @@ def pathCreate(local, name_path):
     os.chdir(pathDir())
 
 
-async def archiveID(arquivo, extension, pasta):
+def archiveID(arquivo, extension, pasta):
     download = pathDir()
     os.chdir(download)
     PASTAS ='ARQUIVOS', 'SCRIPTS'
@@ -34,14 +34,17 @@ async def archiveID(arquivo, extension, pasta):
         try:
             if value in arquivo:
                 try:
+
                     if '.jfif' in arquivo:
                         archiver = arquivo.split('.')
                         archiver[-1] = '.jpg'
                         new_archiver = archiver[0] + archiver[-1]
-                        await os.rename(arquivo, new_archiver)
-                        
+                        os.rename(arquivo, new_archiver)
                         
                 
+                except FileNotFoundError:
+                    return
+
                 except Exception:
                     for item in PASTAS:
                         os.makedirs(item)
@@ -50,8 +53,8 @@ async def archiveID(arquivo, extension, pasta):
                
                 
                 finally:
-                    await shutil.move(arquivo, pasta)
+                    shutil.move(arquivo, pasta)
             
         except:
-            await os.remove(arquivo)
+            os.remove(arquivo)
 
